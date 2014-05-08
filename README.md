@@ -28,8 +28,8 @@ You can clone the repository and then install dependencies using make:
 ### Database 
 You'll need to create the database and initialize schema:
 
-    echo 'CREATE DATABASE taskmanager CHARSET=utf8 COLLATE=utf8_unicode_ci' | mysql -u root
-    cat schema/taskmanager.sql | mysql -u root taskmanager
+    echo 'CREATE DATABASE zfblog CHARSET=utf8 COLLATE=utf8_unicode_ci' | mysql -u root
+    cat schema/zfblog.sql | mysql -u root zfblog
 
 ### Run tests
 
