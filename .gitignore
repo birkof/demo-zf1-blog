@@ -1,8 +1,7 @@
 __logs/
 __backup/
 vendor/
-INSTALL.txt
-LICENSE.txt
-README.txt
+LICENSE
+README.md
 composer.phar
 composer.lock
