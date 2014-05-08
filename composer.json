@@ -1,0 +1,23 @@
+{
+	"name": "birkof/zendpress",
+	"description": "A powerful blogging platform built with the help of ZF1 framework",
+	"keywords": ["php", "php framework", "zend framework", "zf1", "blog", "zend blog"],
+	"homepage": "http://birkof.ro/",
+	"license": "GPL-3.0+",
+	"type": "application",
+	"require": {
+		"php": ">=5.2.0"
+	},
+	"authors": [
+		{
+        	"name": "Daniel Stancu",
+			"email": "birkof@birkof.ro",
+	        "homepage": "http://birkof.ro",
+			"role": "Software engineer"
+		}
+	],
+	"require": {
+	    "php": ">=5.2.0",
+		"zendframework/zendframework1": "1.*"
+	}
+}
