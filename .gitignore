@@ -2,6 +2,7 @@ __logs/
 __backup/
 vendor/
 LICENSE
+CHANGELOG.md
 README.md
 composer.phar
 composer.lock
