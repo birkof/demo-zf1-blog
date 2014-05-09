@@ -18,5 +18,7 @@
 	</div>
 </article>
 <?php endforeach; ?>
+<?php else: ?>
+	<div class="well well-lg">There are no more articles on the database.</div>
 <?php endif; ?>
 <?php echo $this->paginationControl($this->articles, 'Sliding', 'pagination.phtml'); ?>
