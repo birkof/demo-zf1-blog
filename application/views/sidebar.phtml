@@ -1,0 +1,27 @@
+<div class="sidebar-module sidebar-module-inset">
+	<h4>About</h4>
+	<p>Yet another blogging platform built with help of <em>Zend Framework</em> first version.</p>
+</div>
+<div class="sidebar-module">
+	<h4>Tag cloud</h4>
+	<p>
+	<?php $tag_cloud = $this->getHelper('Sidebar')->tags(); ?>
+	<?php if (!empty($tag_cloud)): ?>
+	<?php foreach ($tag_cloud as $tag): ?>
+		<a href="<?php echo $this->baseUrl('tag/'); ?><?php echo $tag['slug']; ?>" title="View all articles under this tag" class="btn btn-info btn-xs" style="margin-bottom: 5px;"><?php echo $tag['name']; ?></a>
+	<?php endforeach; ?>
+	<?php else: ?>
+		The tag cloud is empty
+	<?php endif; ?>
+	</p>
+</div>
+
+<div class="sidebar-module">
+	<h4>Elsewhere</h4>
+	<ol class="list-unstyled">
+		<li><a href="http://git.io/birkof">GitHub</a></li>
+		<li><a href="https://twitter.com/birkof">Twitter</a></li>
+		<li><a href="http://fb.com/birkof">Facebook</a></li>
+	</ol>
+</div>
+

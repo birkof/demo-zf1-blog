@@ -1,0 +1,22 @@
+<h1 class="h1">Articles</h1>
+<br />
+<?php if (!empty($this->articles)): ?>
+<?php foreach ($this->articles as $article): ?>
+<article class="blog-post">
+	<h2 class="h4"><?php echo $this->escape($article['title']); ?></h2>
+	<p class="blog-post-meta">
+		Posted on <?php echo date('j F, Y', $article['date']); ?> by <a href="<?php echo $this->baseUrl();?>author/<?php echo $this->escape($article['username']); ?>"><?php echo $article['author']; ?></a>
+		<?php if (!empty($article['tags'])): ?>
+		Tags: 
+		<?php foreach ($article['tags'] as $tag): ?>
+			<a href="<?php echo $this->baseUrl('tag/'); ?><?php echo $tag['slug']; ?>" title="View all articles under this tag" class="btn btn-info btn-xs"><?php echo $tag['name']; ?></a>
+		<?php endforeach; ?>
+		<?php endif; ?>
+		</p>
+	<div class="blog-post-summary">
+		<?php echo nl2br(mb_substr(strip_tags($article['content']), 0 , 300, 'UTF-8')); ?> ...
+	</div>
+</article>
+<?php endforeach; ?>
+<?php endif; ?>
+<?php echo $this->paginationControl($this->articles, 'Sliding', 'pagination.phtml'); ?>

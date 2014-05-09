@@ -1,0 +1,45 @@
+<?php echo $this->doctype() ?>
+<html lang="en">
+<head>
+	<title>ZF1-Blog - Yet another blogging platform.</title>
+	<meta charset="UTF-8">
+	<link href="//netdna.bootstrapcdn.com" rel="dns-prefetch">
+	<link href="//fonts.googleapis.com" rel="dns-prefetch">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800">
+	<?php echo $this->headLink()->appendStylesheet('/css/styles.css') ?>
+</head>
+<body>
+	<header class="blog-masthead">
+		<?php echo $this->partial('header.phtml'); ?>
+	</header>
+	<section class="container">
+		<div class="blog-header">
+			<h1 class="blog-title">ZF1-Blog</h1>
+			<p class="lead blog-description">Yet another Zend Framework 1 blogging platform.</p>
+		</div>
+		<div class="row">
+			<section class="col-sm-9 blog-main">
+				<?php echo $this->layout()->content ?>
+			</section>
+			<aside class="col-sm-3 blog-sidebar">
+				<?php echo $this->partial('sidebar.phtml', $this); ?>
+			</aside>
+		</div>
+	</section>
+	<footer class="blog-footer">
+		<?php echo $this->partial('footer.phtml'); ?>
+	</footer>
+	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script>
+		$(function() {
+		});
+	</script>
+</body>
+</html>
