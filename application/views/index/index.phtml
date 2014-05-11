@@ -1,4 +1,4 @@
-<?php if (!empty($this->articles)): ?>
+<?php if (count($this->articles)): ?>
 <?php foreach ($this->articles as $article): ?>
 <article class="blog-post">
 	<h2 class="blog-post-title"><?php echo $this->escape($article['title']); ?></h2>
@@ -16,5 +16,7 @@
 	</div>
 </article>
 <?php endforeach; ?>
+<?php else: ?>
+	<div class="well well-lg">There are no more articles on the database.</div>
 <?php endif; ?>
 <?php echo $this->paginationControl($this->articles, 'Sliding', 'pagination.phtml'); ?>

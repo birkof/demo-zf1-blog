@@ -57,7 +57,15 @@ class Model_DbTable_Articles extends Zend_Db_Table_Abstract
 			->where('t.`slug` = ?', strtolower($tag))
 			->order('a.article_id DESC');
 
-		return $this->fetchAll($select)->toArray();
+		$results = $this->fetchAll($select)->toArray();
+		
+		// Extracting tags for each article
+		array_walk($results, function(&$value, $key){
+			$tag = new Model_DbTable_Tags();
+			$value['tags'] = $tag->getTagsByArticle($value['article_id']);
+		});
+
+		return $results;
 	}
 
     /*

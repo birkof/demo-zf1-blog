@@ -1,6 +1,6 @@
 <h1 class="h1">Tag Articles</h1>
 <br />
-<?php if (!empty($this->articles)): ?>
+<?php if (count($this->articles)): ?>
 <?php foreach ($this->articles as $article): ?>
 <article class="blog-post">
 	<h2 class="h4"><?php echo $this->escape($article['title']); ?></h2>
@@ -9,7 +9,7 @@
 		<?php if (!empty($article['tags'])): ?>
 		Tags: 
 		<?php foreach ($article['tags'] as $tag): ?>
-			<a href="<?php echo $this->baseUrl('tag/'); ?><?php echo $tag['slug']; ?>" title="View all articles under this tag" class="btn btn-info btn-xs"><?php echo $tag['name']; ?></a>
+			<a href="<?php echo $this->baseUrl('tag/'); ?><?php echo $tag['slug']; ?>" title="View all articles under this tag" class="btn btn-success btn-xs"><?php echo $tag['name']; ?></a>
 		<?php endforeach; ?>
 		<?php endif; ?>
 		</p>
